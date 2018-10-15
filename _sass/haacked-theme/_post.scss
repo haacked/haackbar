@@ -1,0 +1,67 @@
+// --------
+// Post Metadata
+// --------
+.meta {
+  @include relative-font-size(.9);
+  @include relative-font-weight(.5);
+  color: $grey-color-medium;
+  margin-left: 4px;
+
+  a {
+    color: $grey-color-medium;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+
+    &:hover {
+      color: $grey-color-dark;
+      text-decoration: underline;
+    }
+  }
+
+  .date,
+  .tags,
+  .comments,
+  .edit {
+    padding-right: 10px;
+  }
+
+  .date::before,
+  .tags::before,
+  .comments::before,
+  .edit::before {
+    color: lighten($grey-color-medium, 10%);
+    font-family: FontAwesome;
+    left: 0;
+    margin-right: 5px;
+  }
+
+  .date::before {
+    content: '\f073';
+  }
+
+  .tags::before {
+    content: '\f02c';
+  }
+
+  .comments::before {
+    content: '\f075';
+  }
+
+  .edit::before {
+    content: '\f044';
+  }
+}
+
+@mixin media-query($on-mobile) {
+  .meta .date,
+  .meta .tags,
+  .meta .comments,
+  .meta .edit {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: middle;
+    zoom: 1;
+  }
+}

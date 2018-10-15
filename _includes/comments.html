@@ -1,0 +1,5 @@
+{% if site.comments.disqus_shortname %}
+  {% include comments/disqus_comments.html %}
+{% else %}
+  {% include comments/jekyll_comments.html %}
+{% endif %}

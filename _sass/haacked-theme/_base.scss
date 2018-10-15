@@ -1,0 +1,246 @@
+// --------
+// Reset some basic elements
+// --------
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+// --------
+// Basic Styling
+// --------
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height}
+    $base-font-family;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  -webkit-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+}
+
+// --------
+// Set `margin-bottom` to maintain vertical rhythm
+// --------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
+
+// --------
+// Images
+// --------
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+// --------
+// Figures
+// --------
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: $small-font-size;
+}
+
+// --------
+// Lists
+// --------
+ul,
+ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+// --------
+// Headings
+// --------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $base-font-weight;
+}
+
+// --------
+// Links
+// --------
+a {
+  color: darken($brand-color, 10%);
+  text-decoration: none;
+
+  &:visited {
+    color: darken($brand-color, 20%);
+  }
+
+  &:hover {
+    color: lighten($brand-color, 10%);
+    transition: color 0.3s;
+  }
+}
+
+// --------
+// Blockquotes
+// --------
+blockquote {
+  @include relative-font-size(1.125);
+  border-left: 4px solid $grey-color-light;
+  color: $grey-color;
+  font-style: italic;
+  letter-spacing: -1px;
+  padding-left: $spacing-unit / 2;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// --------
+// Wrapper
+// --------
+.wrapper {
+  @extend %clearfix;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  padding-left: $spacing-unit;
+  padding-right: $spacing-unit;
+}
+
+// --------
+// Clear Fix
+// --------
+%clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+// --------
+// Icons
+// --------
+
+.svg-icon {
+  display: inline-block;
+  fill: #{$grey-color};
+  height: 16px;
+  padding-right: 5px;
+  vertical-align: text-top;
+  width: 16px;
+}
+
+.social-media-list {
+  li + li {
+    padding-top: 5px;
+  }
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('#{$baseurl}/assets/font/fa-solid-900.eot');
+  src: url('#{$baseurl}/assets/font/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+    url('#{$baseurl}/assets/font/fa-solid-900.woff') format('woff'),
+    url('#{$baseurl}/assets/font/fa-solid-900.ttf') format('truetype'),
+    url('#{$baseurl}/assets/font/fa-solid-900.svgz#FontAwesomeRegular') format('svg'),
+    url('#{$baseurl}/assets/font/fa-solid-900.svg#FontAwesomeRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// --------
+// Tables
+// --------
+table {
+  border: 1px solid $grey-color-light;
+  border-collapse: collapse;
+  color: lighten($text-color, 18%);
+  margin-bottom: $spacing-unit;
+  text-align: $table-text-align;
+  width: 100%;
+
+  tr {
+    &:nth-child(even) {
+      background-color: lighten($grey-color-light, 6%);
+    }
+  }
+
+  th,
+  td {
+    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+  }
+
+  th {
+    background-color: lighten($grey-color-light, 3%);
+    border: 1px solid darken($grey-color-light, 4%);
+    border-bottom-color: darken($grey-color-light, 12%);
+  }
+
+  td {
+    border: 1px solid $grey-color-light;
+  }
+}
+
+// --------
+// Captions
+// --------
+.post-content {
+  font-family: $post-font-family;
+
+  .caption {
+    color: $caption-color;
+    display: block;
+    font-size: .6em;
+    font-style: italic;
+    padding-left: 15px;
+    position: relative;
+  }
+
+  .caption::before {
+    content: '\f05a';
+    font-family: FontAwesome;
+    left: 0;
+    line-height: 1.6em;
+    position: absolute;
+  }
+}

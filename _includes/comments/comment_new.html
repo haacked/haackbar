@@ -1,0 +1,26 @@
+<form action="/fake" data-action="{{ site.comments.receiver }}" method="post" class="comment-form form-horizontal comment-box">
+    <input name="redirect" type="hidden" value="{{site.url}}/thanks">
+    <input name="post_id" type="hidden" value="{{ slug }}">
+    <input name="comment-site" type="hidden" value="{{ site.url }}">
+    <div class="comment-box">
+        <img src="{{ '/assets/img/unknown-avatar.png' | relative_url }}" data-fallbacksrc="{{ '/assets/img/unknown-avatar.png' | relative_url }}" data-role="user-avatar" alt="avatar" class="avatar" id="avatar-preview" />
+        <div class="commenttext">
+        <div class="comment-status status"></div>
+        <div contenteditable="true" tabindex="0" role="textbox" aria-multiline="true" data-role="editable" class="textarea plaintext" aria-label="Join the discussion..." id="comment-div" data-target="message"></div>
+        <input type="hidden" name="message" id="message" data-required="true" value="" />
+        </div>
+    </div>
+    <div class="comment-author">
+        <div class="control-group">
+        <input type="hidden" name="avatar" id="avatar-input" />
+        <input type="text" name="name" id="name" placeholder="Display Name" title="Name displayed with your comment" data-required="true" />
+        <input type="text" name="identity" id="identity" placeholder="email/@twitter/github" data-required="true" value="" />
+        <span class="info-circle" title="Identity is used to generate an avatar image only. It is cleared out when you click submit and not sent to the server."></span>
+        <button type="button" class="comment-button">Leave response</button>
+        <div class="remember-me">
+            <input type="checkbox" name="remember" id="remember"><label for="remember">Remember me</label>
+            <span class="info-circle" title="Stores your name and email in the browser so you don't have to fill out the form again. This does not set a cookie."></span>
+        </div>
+        </div>
+    </div>
+</form>
