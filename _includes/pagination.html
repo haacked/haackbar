@@ -1,0 +1,41 @@
+<!-- pagination -->
+<!-- Pagination adapted from https://blog.webjeda.com/jekyll-pagination/ -->
+{% if paginator.total_pages > 1 %}
+{% assign current_modulo = paginator.page | minus: 1 | modulo: site.page_group_size | plus: 1 %}
+{% assign low_page = paginator.page | minus: current_modulo | plus: 1 %}
+{% assign high_page = low_page | plus: site.page_group_size | minus: 1 | at_most: paginator.total_pages %}
+<div class="pagination"> 
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+  {% if low_page > 1 %}
+    <a href="/">1</a>
+
+    {% assign previous_page_group = low_page | minus: 1 %}
+    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', previous_page_group }}">...</a>
+  {% endif %}
+  {% for page in (low_page..high_page) %}
+    {% if page == paginator.page %}
+      <span>{{ page }}</span>
+    {% elsif page == 1 %}
+      <a href="/">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+  {% if paginator.total_pages > high_page %}
+    {% assign next_page_group = high_page | plus: 1 %}
+    {% if next_page_group < paginator.total_pages %}
+    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', next_page_group }}">...</a>
+    {% endif %}
+    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', paginator.total_pages }}">{{paginator.total_pages}}</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}

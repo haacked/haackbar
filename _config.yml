@@ -1,0 +1,96 @@
+title: Your awesome title
+subtitle: ...and more title
+author: Blog Author
+avatar_url: /assets/img/unknown-avatar.png  # Should be 160x160px.
+description: > # this means to ignore newlines until "twitter_username:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+repository: haacked/haackbar
+
+# contact
+contact:
+  email: your-email@domain.com  # Comment out this line if you don't want to expose your email.
+#  url: https://your-contact-url # Uncomment this to provide a contact form url instead of an email
+
+# social links
+twitter_username: jekyllrb
+github_username:  jekyll
+rss: rss
+#dribbble_username: jekyll
+#facebook_username: jekyll
+#flickr_username: jekyll
+#instagram_username: jekyll
+#linkedin_username: jekyll
+#pinterest_username: jekyll
+#youtube_username: jekyll
+#googleplus_username: +jekyll
+
+# 
+# Subscribe Feed
+# 
+# By default, your site generates a subscription feed (RSS/Atom) at /feed.xml
+# Uncomment the next two lines to change the path.
+# feed:
+#   path: /atom.xml
+
+# If you use a feed publisher such as Feedburner, uncomment the next line
+# subscribe_rss: https://your-feedburner-url/
+
+# Homepage
+show_excerpts: true  # set to true to show excerpts on the homepage, otherwise full posts are shown
+
+# Comments
+# To enable comments, set the `enabled` field to true and supply either a Disqus short name or a Jekyll comments receiver
+comments:
+  enabled: false
+  show_count: false
+#  receiver: https://.../  # See https://haacked.com/archive/2018/06/24/comments-for-jekyll-blogs/ for more information.
+#  disqus_shortname: YOUR_DISQUS_SHORTNAME
+
+emptyArray: [] # Leave this here.
+
+# Haacked-Theme date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+haacked-theme:
+  date_format: "%b %-d, %Y"
+
+#
+# Jekyll Settings
+#
+permalink: /archive/:year/:month/:day/:title/
+paginate: 2 # number of posts per page
+page_group_size: 5 # number of pages to group by in the pagination.
+paginate_path: "/archive/page/:num"
+category_dir: categories
+
+# Front matter defaults
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: post
+      comments: true
+  -
+    scope:
+      path: "pages"
+      type: "pages"
+    values:
+      layout: page
+      comments: false
+
+# Build settings
+markdown: kramdown
+kramdown:
+  hard_wrap: false
+theme: haacked-theme
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate

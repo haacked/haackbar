@@ -1,0 +1,17 @@
+.archives {
+  h2 {
+    @include relative-font-size(1.4);
+    @include relative-font-weight(1);
+    border-bottom: dotted 1px $grey-color;
+  }
+
+  h3 {
+    @include relative-font-size(1);
+    @include relative-font-weight(1);
+    display: inline-block;
+  }
+
+  .meta {
+    display: inline-block;
+  }
+}

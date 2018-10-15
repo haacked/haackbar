@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+// AT MINIMUM, OVERRIDE THESE FIRST FOUR TO MAKE THE THEME YOUR OWN
+$header-background-color: #652a2b !default;
+$brand-color:      #d2691e !default;
+$post-font-family: Georgia, Cambria, "Times New Roman", Times, serif !default;
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$code-font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'lucida console' !default;
+$baseurl: '' !default;
+
+$base-font-size:   18px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * .875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #111 !default;
+$muted-text-color: #656c7a;
+$background-color: #fdfdfd !default;
+$highlight-color:  #fcf9eb;
+
+$caption-color:       #999;
+$caption-icon-color:  #333;
+
+$grey-color:       #828282 !default;
+$grey-color-medium:#aaa !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$table-text-align: left !default;
+
+// Width of the sidebar
+$sidebar-width: 300px !default;
+
+// Width of the content area
+$content-width:    800px !default;
+$on-mobile:        600px !default;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+@mixin relative-font-weight($ratio) {
+  font-weight: $base-font-weight * $ratio;
+}
+
+// Import partials.
+@import
+  'haacked-theme/base',
+  'haacked-theme/layout',
+  'haacked-theme/header',
+  'haacked-theme/post',
+  'haacked-theme/comments',
+  'haacked-theme/contributors',
+  'haacked-theme/archive',
+  'haacked-theme/pagination',
+  'haacked-theme/code';

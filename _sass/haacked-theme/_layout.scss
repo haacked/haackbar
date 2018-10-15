@@ -1,0 +1,108 @@
+//
+// Site footer
+//
+.site-footer {
+  border-top: 1px solid $grey-color-light;
+  margin-left: $sidebar-width;
+  padding: $spacing-unit 0;
+
+  @include media-query($on-mobile) {
+    margin-left: auto;
+  }
+}
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.footer-col-wrapper {
+  @extend %clearfix;
+  @include relative-font-size(.9375);
+  @include relative-font-weight(.875);
+  color: $grey-color-dark;
+  margin-left: -$spacing-unit / 2;
+}
+
+.footer-col {
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+  width: calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+  width: calc(20% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+  width: calc(45% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-mobile) {
+  .footer-col {
+    float: none;
+    width: calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+//
+// Page content
+//
+.page-content {
+  margin-left: $sidebar-width;
+  margin-right: auto;
+  padding: $spacing-unit 0;
+
+  @include media-query($on-mobile) {
+    margin-left: auto;
+  }
+}
+
+.page-heading {
+  @include relative-font-size(2);
+}
+
+.post-link {
+  @include relative-font-size(1.5);
+  display: block;
+}
+
+//
+// Posts
+//
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+.post-title {
+  @include relative-font-size(3);
+  @include relative-font-weight(8);
+
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.post-content {
+  margin-bottom: $spacing-unit;
+
+  h2 {
+    @include relative-font-size(2);
+    border-bottom: dotted 1px $grey-color-medium;
+    line-height: 1;
+  }
+
+  h3 {
+    @include relative-font-size(1.525);
+    color: lighten($text-color, 20%);
+    margin-bottom: $spacing-unit / 4;
+  }
+
+  h4 {
+    @include relative-font-size(1.25);
+  }
+}
