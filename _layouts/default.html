@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {% include head.html %}
+  {% include_cached head.html %}
 
   <body>
-    <header class="header" class="inner">{% include header.html %}</header>
+    <header class="header" class="inner">{% include_cached header.html page_url = page.url %}</header>
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -12,7 +12,7 @@
       </div>
     </main>
 
-    {% include footer.html %}
+    {% include_cached footer.html %}
   </body>
 
 </html>
