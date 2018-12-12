@@ -44,7 +44,7 @@ var Haack = (function() {
 Haack.ready(function() {
   // Set current page on navigation
   const path = window.location.pathname
-  const currentPageLink = document.querySelector('a[href="' + path + '"]')
+  const currentPageLink = document.querySelector('.site-nav li a[href="' + path + '"]')
   if (currentPageLink) {
     const listItem = currentPageLink.parentElement
     listItem.classList.add('current-page')
@@ -52,5 +52,5 @@ Haack.ready(function() {
     span.innerText = currentPageLink.textContent
     listItem.appendChild(span)
     listItem.removeChild(currentPageLink)
-  }
+}
 })
