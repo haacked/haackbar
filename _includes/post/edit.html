@@ -3,5 +3,7 @@
 {% else %}
   {% assign path = page.path %}
 {% endif %}
+{% assign source_repo_url = site.github_repo_url | default: site.github.repository_url %}
+{% assign source_branch = site.github_source_branch | default: site.github.source.branch | default: 'gh-pages' %}
 
-<a href="{{ site.github_repo_url | default: site.github.repository_url }}/edit/gh-pages/{{ path }}">suggest edit</a>
+<a href="{{ source_repo_url }}/edit/{{ source_branch }}/{{ path }}">suggest edit</a>
