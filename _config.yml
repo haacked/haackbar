@@ -80,6 +80,13 @@ defaults:
     values:
       layout: page
       comments: false
+  -
+    scope:
+      path: "assets/pages"
+      type: "pages"
+    values:
+      layout: page
+      comments: false
 
 # Build settings
 markdown: kramdown
