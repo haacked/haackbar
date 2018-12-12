@@ -7,7 +7,7 @@
 {% endfor %}
 {% assign comment_count = comments | size %}
 {% assign author = site.author | upcase %}
-<div class="comments">
+<div id="comments" class="comments">
   <h2>Comments</h2>
   {% include comments/comment_new.html %}
   <h3 class="comment-count">{% if comment_count == 1 %}One response{% else %}{{ comment_count }} responses{% endif %}</h3>
