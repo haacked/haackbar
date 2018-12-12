@@ -50,6 +50,15 @@
   }
 }
 
+.site-footer .wrapper,
+.page-content .wrapper {
+  margin-left: 10%;
+
+  @include media-query($on-mobile) {
+    margin-left: auto;
+  }
+}
+
 //
 // Page content
 //

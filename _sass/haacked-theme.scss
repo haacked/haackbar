@@ -35,8 +35,7 @@ $table-text-align: left !default;
 $sidebar-width: 300px !default;
 
 // Width of the content area
-$content-width:    800px !default;
-$on-mobile:        600px !default;
+$on-mobile:        800px !default;
 
 @mixin media-query($device) {
   @media screen and (max-width: $device) {

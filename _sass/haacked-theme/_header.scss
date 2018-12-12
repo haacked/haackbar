@@ -50,6 +50,11 @@
 .site-header {
   margin: 16% auto 10% 10%;
   width: 60%;
+
+  @include media-query($on-mobile) {
+    margin: 5% auto 10%;
+    text-align: center;
+  }
 }
 
 .profilepic {
@@ -62,6 +67,10 @@
     display: block;
     margin: 0;
     width: 160px;
+    
+    @include media-query($on-mobile) {
+      margin: 0 auto;
+    }
   }
 }
 
