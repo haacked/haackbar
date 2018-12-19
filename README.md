@@ -15,7 +15,7 @@ This theme supports being installed as a [remote theme on GitHub Pages](https://
 Add this line to the `_config.yml` of your Jekyll site:
 
 ```yaml
-remote_theme:: haacked/haacked-theme
+remote_theme:: haacked/haackbar
 ```
 
 And copy all the relevant [settings from the theme's `_config.yml`](https://github.com/Haacked/haackbar/blob/master/_config.yml). You'll want to hange the values to reflect your website, unless your name just happens to be "Blog Author."
@@ -45,10 +45,10 @@ Refers to snippets of code within the `_includes` directory that can be inserted
 
 Refers to `.scss` files within the `_sass` directory that define the theme's styles.
 
-  - `haacked-theme.scss` &mdash; The core file imported by preprocessed `main.scss`, it defines the variable defaults for the theme and also further imports sass partials to supplement itself.
-  - `haacked-theme/_base.scss` &mdash; Resets and defines base styles for various HTML elements.
-  - `haacked-theme/_layout.scss` &mdash; Defines the visual style for various layouts.
-  - `haacked-theme/_syntax-highlighting.scss` &mdash; Defines the styles for syntax-highlighting.
+  - `haackbar.scss` &mdash; The core file imported by preprocessed `main.scss`, it defines the variable defaults for the theme and also further imports sass partials to supplement itself.
+  - `haackbar/_base.scss` &mdash; Resets and defines base styles for various HTML elements.
+  - `haackbar/_layout.scss` &mdash; Defines the visual style for various layouts.
+  - `haackbar/_syntax-highlighting.scss` &mdash; Defines the styles for syntax-highlighting.
 
 ### Assets
 
@@ -60,7 +60,7 @@ This directory can include sub-directories to manage assets of similar type, and
 
 ### Plugins
 
-Haacked-theme comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to make sure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag#usage) to know how to set it up.
+haackbar comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to make sure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag#usage) to know how to set it up.
 
 ## Usage
 
@@ -76,14 +76,14 @@ Usually the `site.title` itself would suffice as the implicit 'main-title' for a
 
 ### Customization
 
-To override the default structure and style of haacked-theme, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
-e.g., to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from haacked-theme gem folder to `<yoursite>/_includes` and start editing that file.
+To override the default structure and style of haackbar, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
+e.g., to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from haackbar gem folder to `<yoursite>/_includes` and start editing that file.
 
 The site's default CSS has now moved to a new place within the gem itself, [`assets/css/main.scss`](assets/css/main.scss). To **override the default CSS**, the file has to exist at your site source. Do either of the following:
 - Create a new instance of `main.scss` at site source.
   - Create a new file `main.scss` at `<your-site>/assets/css/`
   - Add the frontmatter dashes, and
-  - Add `@import "haacked-theme";`, to `<your-site>/assets/main.scss`
+  - Add `@import "haackbar";`, to `<your-site>/assets/main.scss`
   - Add your custom CSS to the file.
 - Download the file from this repo
   - Create  a new file `main.scss` at `<your-site>/assets/css/`
@@ -95,13 +95,13 @@ To include a page (a markdown file with `layout: page`) in the navigation sectio
 
 ### Change default date format
 
-You can change the default date format by specifying `site.haacked-theme.date_format`
+You can change the default date format by specifying `site.haackbar.date_format`
 in `_config.yml`.
 
 ```
-# Haacked-Theme date format
+# haackbar date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-haacked-theme:
+haackbar:
   date_format: "%b %-d, %Y"
 ```
 
@@ -174,7 +174,7 @@ Otherwise the home page shows the full contents of each post.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/haacked/haacked-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/haacked/haackbar. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
