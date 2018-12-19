@@ -92,7 +92,6 @@ defaults:
 markdown: kramdown
 kramdown:
   hard_wrap: false
-theme: haacked-theme
 exclude:
   - Gemfile
   - Gemfile.lock
