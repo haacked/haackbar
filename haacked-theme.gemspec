@@ -1,13 +1,13 @@
 # coding: utf-8
 
 Gem::Specification.new do |spec|
-  spec.name          = "haacked-theme"
+  spec.name          = "haackbar"
   spec.version       = "0.1.0"
   spec.authors       = ["Phil Haack"]
   spec.email         = ["haacked@gmail.com"]
 
   spec.summary       = "Theme based off of Minima and Greyshade used by haacked.com"
-  spec.homepage      = "https://github.com/haacked/haacked-theme"
+  spec.homepage      = "https://github.com/haacked/haackbar"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }

@@ -53,12 +53,12 @@ $on-mobile:        800px !default;
 
 // Import partials.
 @import
-  'haacked-theme/base',
-  'haacked-theme/layout',
-  'haacked-theme/header',
-  'haacked-theme/post',
-  'haacked-theme/comments',
-  'haacked-theme/contributors',
-  'haacked-theme/archive',
-  'haacked-theme/pagination',
-  'haacked-theme/code';
+  'haackbar/base',
+  'haackbar/layout',
+  'haackbar/header',
+  'haackbar/post',
+  'haackbar/comments',
+  'haackbar/contributors',
+  'haackbar/archive',
+  'haackbar/pagination',
+  'haackbar/code';
