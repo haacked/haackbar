@@ -14,8 +14,17 @@ include_nav: false
     if(tag) {
         let tagElement = document.getElementById(tag.substring(1))
         if (tagElement) {
-        tagElement.style.display = 'block'
+          tagElement.style.display = 'block'
         }
+    }
+    else {
+      // Let's just show them all
+      var tags = document.getElementsByClassName('tag')
+      for (var tagElement of tags) {
+        if (tagElement) {
+          tagElement.style.display = 'block'
+        }
+      }
     }
   })
 </script>
