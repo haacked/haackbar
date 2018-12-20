@@ -1,6 +1,6 @@
 ---
 title: "This post demonstrates post content styles"
-categories: junk
+tags: [sample, demo]
 author: "Bart Simpson"
 meta: "Springfield"
 ---
