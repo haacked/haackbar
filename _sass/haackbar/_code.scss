@@ -281,8 +281,7 @@ pre code {
   box-shadow: 1px 1px 2px $grey-color-medium;
   color: $text-color;
   display: block;
-  font-family: Consolas, Menlo, Monaco, "Andale Mono", "lucida console",
-    "Courier New", monospace;
+  font-family: $code-font-family;
   line-height: 1.5;
   margin: 10px 0 8px;
   overflow-x: auto;
