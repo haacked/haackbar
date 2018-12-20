@@ -12,9 +12,14 @@ $name-class: #63a;
 $comment: #292;
 $pre-processor: #007d9a;
 $asp: #cc0;
+$html: #02a;
 
 .asp {
   color: $asp;
+}
+
+.html {
+  color: $html;
 }
 
 .highlight {
