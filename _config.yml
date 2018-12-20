@@ -62,7 +62,6 @@ permalink: /archive/:year/:month/:day/:title/
 paginate: 2 # number of posts per page
 page_group_size: 5 # number of pages to group by in the pagination.
 paginate_path: "/archive/page/:num"
-category_dir: categories
 
 # Front matter defaults
 defaults:

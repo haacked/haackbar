@@ -1,0 +1,4 @@
+{% assign tags = page.tags | default: post.tags %}
+{% for tag in tags %}
+  <a href="/tags/#{{ tag }}">{{ tag }}</a> 
+{% endfor %}

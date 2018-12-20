@@ -3,7 +3,7 @@
     {% assign date_format = site.haackbar.date_format | default: "%b %-d, %Y" %}
     {{ page.date | default:post.date | date: date_format }}
   </time>
-  <span class="tags">{% include post/categories.html %}</span>
+  <span class="tags">{% include post/tags.html %}</span>
   {% if site.comments.enabled and site.comments.show_count == true %}
     {% include post/comments_link.html %}
   {% endif %}
