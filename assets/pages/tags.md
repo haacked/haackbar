@@ -29,10 +29,6 @@ include_nav: false
   })
 </script>
 
-<style>
-  .tag {display: none;}
-</style>
-
 {% assign tags = site.tags %}
 
 {% for tag in tags %}
