@@ -29,16 +29,13 @@ include_nav: false
 {% for tag in tags %}
   {% assign tagname = tag | first | slugify %}
 <div id="{{ tagname }}" class="tag">
-  <span>Tagged with</span>
+  <span class="meta">Tagged with</span>
   <h2>{{ tagname }}</h2>
-  {% assign pages = tag[1] %}
+  {% assign posts = tag[1] %}
   <ul>
-  {% for page in pages %}
+  {% for post in posts %}
     <li>
-      <h3>{{ page.title }}</h3>
-      <div>
-        {{ page.excerpt }}
-      </div>
+      <h3 class="title"><a href="{{ post.url }}">{{post.title}}</a></h3>
     </li>
   {% endfor %}
   </ul>
