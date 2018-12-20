@@ -143,7 +143,7 @@ blockquote {
   @extend %clearfix;
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px;
+  max-width: $on-mobile;
   padding-left: $spacing-unit;
   padding-right: $spacing-unit;
 }

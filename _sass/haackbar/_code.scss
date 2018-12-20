@@ -11,6 +11,11 @@ $name-attribute: #008080;
 $name-class: #63a;
 $comment: #292;
 $pre-processor: #007d9a;
+$asp: #cc0;
+
+.asp {
+  color: $asp;
+}
 
 .highlight {
   @extend %vertical-rhythm;
