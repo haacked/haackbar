@@ -12,7 +12,7 @@ Or [visit my repository]({{site.github.repository_url}}) and send me a pull
 request the old fashioned way.
 
 <ul class="contributor-list">
-{% if site.github.contributors.length > 0 %}
+{% if site.github.contributors.size > 0 %}
 
 {% for contributor in site.github.contributors %}
   <li>
