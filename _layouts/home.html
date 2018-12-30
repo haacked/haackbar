@@ -20,11 +20,13 @@ layout: default
     
       <div class="post-content e-content" itemprop="articleBody">
         {% if site.show_excerpts %}
-          {% if post.excerpt_image %}
-          <img src="{{post.excerpt_image }}" class="excerpt-image" />
-          {% endif %}
-          {{ post.excerpt }}
-          <a href="{{ post.url }}">Read More...</a>
+          <div class="excerpt">
+            {% if post.excerpt_image %}
+            <img src="{{post.excerpt_image }}" />
+            {% endif %}
+            {{ post.excerpt }}
+            <a href="{{ post.url }}" class="read-more">Read More</a>
+          </div>
         {% else %}
           {{ post.content }}
         {% endif %}

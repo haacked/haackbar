@@ -107,16 +107,16 @@ h6 {
 // Links
 // --------
 a {
-  color: darken($brand-color, 10%);
+  color: $brand-color;
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 20%);
+    color: darken($brand-color, 5%);
   }
 
   &:hover {
-    color: lighten($brand-color, 10%);
-    transition: color 0.3s;
+    color: lighten($brand-color, 20%);
+    transition: color .3s;
   }
 }
 
