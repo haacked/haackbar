@@ -220,31 +220,3 @@ table {
     border: 1px solid $grey-color-light;
   }
 }
-
-// --------
-// Captions
-// --------
-.post-content {
-  font-family: $post-font-family;
-
-  .caption {
-    color: $caption-color;
-    display: block;
-    font-size: .6em;
-    font-style: italic;
-    padding-left: 15px;
-    position: relative;
-  }
-
-  .caption::before {
-    content: '\f05a';
-    font-family: FontAwesome;
-    left: 0;
-    line-height: 1.6em;
-    position: absolute;
-  }
-}
-
-.tag {
-  display: none;
-}

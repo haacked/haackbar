@@ -1,3 +1,69 @@
+//
+// Posts
+//
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+.post-title {
+  @include relative-font-size(3);
+  @include relative-font-weight(8);
+
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.post-content {
+  font-family: $post-font-family;
+  line-height: 33px;
+  margin-bottom: $spacing-unit;
+
+  h2,
+  h3,
+  h4 {
+    font-family: $base-font-family;
+    font-weight: 600;
+  }
+
+  h2 {
+    @include relative-font-size(1.6);
+    line-height: 1.15;
+    margin-top: $spacing-unit * 1.8;
+  }
+
+  h3 {
+    @include relative-font-size(1.2);
+    color: lighten($text-color, 20%);
+    margin-bottom: $spacing-unit / 4;
+    margin-top: $spacing-unit;
+  }
+
+  h4 {
+    @include relative-font-size(1.1);
+    color: lighten($text-color, 30%);
+    font-weight: 500;
+    margin-bottom: $spacing-unit / 4;
+    margin-top: $spacing-unit / 2;
+  }
+
+  .caption {
+    color: $caption-color;
+    display: block;
+    font-size: .6em;
+    font-style: italic;
+    padding-left: 15px;
+    position: relative;
+  }
+
+  .caption::before {
+    content: '\f05a';
+    font-family: FontAwesome;
+    left: 0;
+    line-height: 1.6em;
+    position: absolute;
+  }
+}
+
 // --------
 // Post Metadata
 // --------
@@ -64,4 +130,8 @@
     vertical-align: middle;
     zoom: 1;
   }
+}
+
+.tag {
+  display: none;
 }

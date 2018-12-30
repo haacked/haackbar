@@ -81,38 +81,3 @@
   @include relative-font-size(1.5);
   display: block;
 }
-
-//
-// Posts
-//
-.post-header {
-  margin-bottom: $spacing-unit;
-}
-
-.post-title {
-  @include relative-font-size(3);
-  @include relative-font-weight(8);
-
-  letter-spacing: -1px;
-  line-height: 1;
-}
-
-.post-content {
-  margin-bottom: $spacing-unit;
-
-  h2 {
-    @include relative-font-size(2);
-    border-bottom: dotted 1px $grey-color-medium;
-    line-height: 1;
-  }
-
-  h3 {
-    @include relative-font-size(1.525);
-    color: lighten($text-color, 20%);
-    margin-bottom: $spacing-unit / 4;
-  }
-
-  h4 {
-    @include relative-font-size(1.25);
-  }
-}
