@@ -17,11 +17,10 @@
   }
 
   .social-media-list {
-    bottom: 10%;
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    position: absolute;
+    margin: 0 auto;
     width: 60%;
 
     li {
@@ -44,6 +43,20 @@
         display: none;
       }
     }
+  }
+}
+
+.social-footer {
+  background-color: $header-background-color;
+  bottom: 0;
+  height: 80px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+
+  // If screen is resized too small, plop the footer in the bottom
+  @media screen and (max-height: 600px) {
+    position: relative;
   }
 }
 
@@ -135,10 +148,14 @@
     position: relative;
     width: 100%;
 
+    .social-footer {
+      height: auto;
+      position: relative;
+    }
+
     .social-media-list {
       bottom: auto;
-      margin: 0 auto;
-      position: relative;
+      height: auto;
       width: 100%;
 
       .svg-icon {
