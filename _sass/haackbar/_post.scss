@@ -18,6 +18,22 @@
   line-height: 33px;
   margin-bottom: $spacing-unit;
 
+  a {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      border-bottom: 1px solid;
+      content: '';
+      display: inline-block;
+      height: 1em;
+      left: 0;
+      margin-top: 4px;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
   h2,
   h3,
   h4 {
@@ -61,6 +77,24 @@
     left: 0;
     line-height: 1.6em;
     position: absolute;
+  }
+
+  .read-more {
+    @include relative-font-size(.8);
+
+    border: solid 1px $header-background-color;
+    font-family: $base-font-family;
+    padding: 2px 10px;
+    text-transform: uppercase;
+
+    &::after {
+      content: none;
+    }
+
+    &:hover {
+      background-color: $header-background-color;
+      color: $background-color;
+    }
   }
 }
 
@@ -142,18 +176,5 @@
 
   img {
     margin-bottom: 30px;
-  }
-}
-
-.read-more {
-  border: solid 1px $header-background-color;
-  display: inline-block;
-  font-family: $base-font-family;
-  padding: 4px 8px;
-  text-transform: uppercase;
-
-  &:hover {
-    background-color: $header-background-color;
-    color: $background-color;
   }
 }
