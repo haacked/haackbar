@@ -1,0 +1,6 @@
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ post.title | default:page.title | default:site.title }}" />
+  <meta name="twitter:description" content="{{ post.description | default:page.description | default:site.description }}" />
+  <meta name="twitter:url" content="{{ site.url }}" />
+  {% if post.excerpt_image or page.excerpt_image or site.avatar_url %}<meta name="twitter:image" content="{{ post.excerpt_image | default:page.excerpt_image | default:site.avatar_url }}" />{% endif %}<meta name="twitter:site" content="@{{ site.twitter_username }}" />
