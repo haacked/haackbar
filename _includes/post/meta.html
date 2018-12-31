@@ -1,5 +1,5 @@
 <div class="meta">
-  <time class="date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+  <time class="date dt-published" datetime="{{ page.date | default:post.date | date_to_xmlschema }}" itemprop="datePublished">
     {% assign date_format = site.haackbar.date_format | default: "%b %-d, %Y" %}
     {{ page.date | default:post.date | date: date_format }}
   </time>
