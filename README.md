@@ -15,7 +15,7 @@ This theme supports being installed as a [remote theme on GitHub Pages](https://
 Add this line to the `_config.yml` of your Jekyll site:
 
 ```yaml
-remote_theme:: haacked/haackbar
+remote_theme: haacked/haackbar
 ```
 
 And copy all the relevant [settings from the theme's `_config.yml`](https://github.com/Haacked/haackbar/blob/master/_config.yml). You'll want to hange the values to reflect your website, unless your name just happens to be "Blog Author."
