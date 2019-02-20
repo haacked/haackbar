@@ -9,6 +9,7 @@
   @include relative-font-size(3);
   @include relative-font-weight(8);
 
+  font-family: $title-font-family;
   letter-spacing: -1px;
   line-height: 1;
 
