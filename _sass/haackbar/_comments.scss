@@ -59,6 +59,8 @@ $placeholder-color: #687a86 !default;
   .comment-body {
     @include relative-font-size(.9);
     @include relative-font-weight(.88);
+    
+    overflow-x: scroll;
   }
 
   &.byauthor {
