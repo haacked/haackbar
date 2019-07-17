@@ -270,6 +270,19 @@ $html: #02a;
   } // Literal.Number.Integer.Long
 }
 
+code {
+  font-family: $code-font-family;
+
+  &.highlighter-rouge {
+    @include relative-font-size(.85);
+    background-color: $inline-code-background-color;
+    border-radius: 3px;
+    margin: 0;
+    padding: .2em .4em;
+    word-wrap: break-word;
+  }
+}
+
 //
 // Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name>
 //
@@ -281,7 +294,6 @@ pre.csharpcode {
   box-shadow: 1px 1px 2px $grey-color-medium;
   color: $text-color;
   display: block;
-  font-family: $code-font-family;
   line-height: 1.5;
   margin: 10px 0 8px;
   overflow-x: auto;

@@ -30,6 +30,8 @@ $grey-color-medium:#aaa !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
+$inline-code-background-color: rgba(27,31,35,.05);
+
 $table-text-align: left !default;
 
 // Width of the sidebar
