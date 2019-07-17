@@ -289,6 +289,6 @@ pre.csharpcode {
   white-space: pre-wrap;
 
   @media screen and (max-width: $on-mobile) {
-    @include relative-font-size(.75);
+    @include relative-font-size(.60);
   }
 }
