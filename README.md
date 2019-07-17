@@ -35,20 +35,20 @@ Refers to files within the `_layouts` directory, that define the markup for your
 
 Refers to snippets of code within the `_includes` directory that can be inserted in multiple layouts (and another include-file as well) within the same theme-gem.
 
-  - `comments.html` &mdash; Code to add support for comments. Both Disqus and [Jekyll Comments](https://haacked.com/archive/2018/06/24/comments-for-jekyll-blogs/) are supported.
-  - `footer.html` &mdash; Defines the site's footer section.
-  - `google-analytics.html` &mdash; Inserts Google Analytics module (active only in production environment).
-  - `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
-  - `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
+- `comments.html` &mdash; Code to add support for comments. Both Disqus and [JekyllComments](https://haacked.com/archive/2018/06/24/comments-for-jekyll-blogs/) aresupported.
+- `footer.html` &mdash; Defines the site's footer section.
+- `google-analytics.html` &mdash; Inserts Google Analytics module (active only inproduction environment).
+- `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
+- `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
 
 ### Sass
 
 Refers to `.scss` files within the `_sass` directory that define the theme's styles.
 
-  - `haackbar.scss` &mdash; The core file imported by preprocessed `main.scss`, it defines the variable defaults for the theme and also further imports sass partials to supplement itself.
-  - `haackbar/_base.scss` &mdash; Resets and defines base styles for various HTML elements.
-  - `haackbar/_layout.scss` &mdash; Defines the visual style for various layouts.
-  - `haackbar/_syntax-highlighting.scss` &mdash; Defines the styles for syntax-highlighting.
+- `haackbar.scss` &mdash; The core file imported by preprocessed `main.scss`, it defines the variable defaults for the theme and also further imports sass partials to supplementitself.
+- `haackbar/_base.scss` &mdash; Resets and defines base styles for various HTML elements.
+- `haackbar/_layout.scss` &mdash; Defines the visual style for various layouts.
+- `haackbar/_syntax-highlighting.scss` &mdash; Defines the styles for syntax-highlighting.
 
 ### Assets
 
