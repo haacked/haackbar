@@ -11,6 +11,7 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+  <span class="edit">Found a typo or mistake in the post? {% include post/edit.html %}</span>
 
   {% if site.comments.enabled %}
     {% include comments.html %}
