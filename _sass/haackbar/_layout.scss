@@ -67,6 +67,7 @@
   margin-left: $sidebar-width;
   margin-right: auto;
   padding: $spacing-unit 0;
+  position: absolute;
 
   @include media-query($on-mobile) {
     margin-left: auto;
