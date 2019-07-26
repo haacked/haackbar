@@ -288,7 +288,7 @@ code {
 //
 pre code,
 pre.csharpcode {
-  @include relative-font-size(.8);
+  @include relative-font-size(.7);
   background: $background-color;
   border: solid 1px $grey-color-light;
   box-shadow: 1px 1px 2px $grey-color-medium;
