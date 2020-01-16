@@ -31,6 +31,10 @@ Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum e
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt.
 
+This is an image
+
+![Alt Text](https://user-images.githubusercontent.com/19977/72463290-bf6e2200-3787-11ea-9c83-26e5cf22a7b4.png "Title text")
+
 ### Some great subheading (h3)
 
 Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum.

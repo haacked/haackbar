@@ -1,15 +1,15 @@
 Haack.ready(function() {
 	var images = document.querySelectorAll('.post-content img')
 	images.forEach(function(img) {
-		var alt = img.alt
+		var title = img.title
 		var parent = img.parentElement
 
-		if (alt && alt != '') {
+		if (title && title != '') {
 			var element = img
 			if (parent.tagName == 'A') {
 				element = parent;
 			}
-			element.insertAdjacentHTML('afterend', '<span class="caption">' + alt + '</span>');
+			element.insertAdjacentHTML('afterend', '<span class="caption">' + title + '</span>');
 		}
 	})
 })
