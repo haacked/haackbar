@@ -14,7 +14,7 @@ layout: default
       {% for post in paginator.posts %}
       {% unless post.redirect %}
       <header class="post-header">
-        <h1 class="post-title p-name" itemprop="name headline"><a href="{{ post.url }}">{{ post.title | escape }}</a></h1>
+        <h1 class="post-title p-name" itemprop="name headline"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h1>
         {% include post/meta.html %}
       </header>
     
@@ -22,10 +22,10 @@ layout: default
         {% if site.show_excerpts %}
           <div class="excerpt">
             {% if post.excerpt_image %}
-            <img src="{{post.excerpt_image }}" />
+            <img src="{{ post.excerpt_image }}" />
             {% endif %}
             {{ post.excerpt }}
-            <a href="{{ post.url }}" class="read-more">Read More</a>
+            <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
           </div>
         {% else %}
           {{ post.content }}
