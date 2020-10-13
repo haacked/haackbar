@@ -40,7 +40,7 @@ include_nav: false
   <ul>
   {% for post in posts %}
     <li>
-      <h3 class="title"><a href="{{ post.url }}">{{post.title}}</a></h3>
+      <h3 class="title"><a href="{{ post.url | relative_url }}">{{post.title}}</a></h3>
     </li>
   {% endfor %}
   </ul>
