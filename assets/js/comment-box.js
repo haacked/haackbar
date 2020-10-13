@@ -63,9 +63,19 @@ Haack.ready(function() {
       if (identity.match(emailRegex)) {
         possibleAvatars.push('https://secure.gravatar.com/avatar/' + md5(identity) + '?s=80&d=identicon&r=pg')
       } else {
-        possibleAvatars.push('https://github.com/' + identity + '.png')
-        possibleAvatars.push('https://avatars.io/twitter/' + identity + '/medium')
+        if (identity.charAt(0) === '@') {
+          identity = identity.substring(1);
+          // Try Twitter first.
+          possibleAvatars.push('https://unavatar.now.sh/twitter/' + identity + '/')
+          possibleAvatars.push('https://github.com/' + identity + '.png')
+        }
+        else {
+          possibleAvatars.push('https://github.com/' + identity + '.png')
+          possibleAvatars.push('https://unavatar.now.sh/twitter/' + identity + '/')  
+        }
+        possibleAvatars.push('https://unavatar.now.sh/' + identity + '/')
       }
+      possibleAvatars.push('https://robohash.org/' + md5(identity));
 
       return possibleAvatars
     }
