@@ -139,6 +139,9 @@ Jekyll Comments is a system built by @damieng that relies on pull requests and d
 You can add links to the accounts you have on other sites, with respective icon, by adding one or more of the following options in your config:
 
 ```yaml
+mastodon:
+  username: haacked
+  instance: hachyderm.io
 twitter_username: jekyllrb
 github_username:  jekyll
 dribbble_username: jekyll
