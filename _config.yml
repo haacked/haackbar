@@ -103,3 +103,4 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-include-cache
+  - jekyll-gfm-admonitions
