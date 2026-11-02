@@ -1,8 +1,19 @@
 .archives {
   h2 {
-    @include relative-font-size(1.4);
-    @include relative-font-weight(1);
-    border-bottom: dotted 1px $grey-color;
+    @include relative-font-size(.85);
+    @include relative-font-weight(1.5);
+    border-bottom: 0;
+    color: $header-background-color;
+    font-family: $base-font-family;
+    letter-spacing: .12em;
+    line-height: 1.2;
+    margin-bottom: $spacing-unit / 3;
+    margin-top: $spacing-unit * 1.4;
+    text-transform: uppercase;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   h3 {
@@ -11,7 +22,92 @@
     display: inline-block;
   }
 
+  ul {
+    list-style: none;
+    margin: 0 0 $spacing-unit;
+    padding: 0;
+  }
+
+  li {
+    border-bottom: 1px solid $grey-color-light;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  a {
+    align-items: baseline;
+    background-image: none;
+    color: $text-color;
+    display: flex;
+    gap: 1.25rem;
+    justify-content: space-between;
+    padding: .75rem .35rem;
+    text-decoration: none;
+
+    &,
+    &:visited {
+      color: $text-color;
+    }
+
+    &:hover {
+      background-color: $highlight-color;
+      box-shadow: inset 3px 0 0 $brand-color;
+      color: $text-color;
+
+      .archive-title {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: .18em;
+      }
+    }
+  }
+
+  .archive-title {
+    font-family: $title-font-family;
+    min-width: 0;
+  }
+
+  .archive-date {
+    color: $grey-color;
+    flex: 0 0 auto;
+    font-family: $base-font-family;
+    font-size: .8em;
+    letter-spacing: .02em;
+  }
+
   .meta {
-    display: inline-block;
+    display: block;
+    margin: 0;
+    padding: 0 .35rem .6rem;
+  }
+
+  @media screen and (max-width: $on-mobile) {
+    li {
+      background-color: $background-color;
+      border: 1px solid $grey-color-light;
+      margin-bottom: $spacing-unit / 2;
+
+      &:last-child {
+        border-bottom: 1px solid $grey-color-light;
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: .2rem;
+      padding: .85rem .9rem .7rem;
+    }
+
+    .archive-date {
+      font-size: .75em;
+    }
+
+    .meta {
+      padding: 0 .9rem .75rem;
+    }
   }
 }

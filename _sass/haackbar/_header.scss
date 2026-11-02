@@ -3,10 +3,11 @@
  */
 .header {
   background-color: $header-background-color;
+  box-sizing: border-box;
   height: 100%;
   left: 0;
   overflow-x: hidden;
-  padding: 1%;
+  padding: 12px 18px 12px 20px;
   position: fixed;
   top: 0;
   width: $sidebar-width;
@@ -61,8 +62,8 @@
 }
 
 .site-header {
-  margin: 16% auto 10% 10%;
-  width: 60%;
+  margin: 16% 0 10%;
+  width: 100%;
 
   @include media-query($on-mobile) {
     margin: 5% auto 10%;
@@ -88,11 +89,13 @@
 }
 
 .site-title {
-  @include relative-font-size(3);
+  @include relative-font-size(2.75);
   @include relative-font-weight(2.5);
+  display: block;
   font-family: $title-font-family;
   color: $background-color;
-  line-height: $base-line-height * $base-font-size * 1.7;
+  line-height: 1.05;
+  padding-right: 6px;
   text-transform: capitalize;
 
   &,
